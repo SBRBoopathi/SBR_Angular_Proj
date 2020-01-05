@@ -5,11 +5,19 @@ header{
   .nac_sect{
     @extend .common_float;
     .dropdown-menu.show button{
-      padding-top: 12px;
-      padding-bottom: 12px;
+      padding-top: 15px;
+      padding-bottom: 15px;
       &:hover{
         background:$corp-color-second-dark !important;
+        border-color:$corp-color-second-dark !important;
+        color:$white;
       }
+      &:focus,&:active{
+        border-color:$corp-color-second-dark !important;
+        }
+        &.active{
+        border-color:$corp-color-second-dark !important;
+        }
     }
   }
   .sect{
@@ -35,13 +43,16 @@ header{
         font-size:14px;
         &:hover{
           background:$corp-color-second-dark;
-           border-color:$corp-color-dark;
+           border-color:$corp-color-second-dark !important;
+           
         }
         &:focus,&:active{
-          box-shadow: none;:none !important;
+          box-shadow: none !important;          
+          border-color:$corp-color-second-dark !important;
         }
         &.active{
-          background:$corp-color-second-dark !important;
+          background:$corp-color-second-dark !important;          
+          border-color:$corp-color-second-dark !important;
         }
       }
     }
