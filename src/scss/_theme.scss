@@ -73,3 +73,25 @@ $base-border-radius: 2px !default;
 $rounded-border-radius: 50% !default;
 $base-border-color: $gray !default;
 
+
+.common_float{
+  float:left;
+  position:relative;
+  width:100%;
+}
+body{
+  margin:0;
+  padding: 0;
+  line-height: 0px;
+  @extend .common_float;
+  .full-width{
+    @extend .common_float;
+    margin:0;
+    padding: 0;
+    .inner_container{
+      margin:0 auto;
+      width:80%;
+    }
+  }  
+}
+
