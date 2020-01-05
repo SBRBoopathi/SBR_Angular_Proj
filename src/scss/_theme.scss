@@ -87,6 +87,9 @@ body{
   padding: 0;
   line-height: 0px;
   @extend .common_float;
+  ul{
+    padding-left:0;
+  }
   .full-width{
     @extend .common_float;
     margin:0;
@@ -113,6 +116,35 @@ body{
         line-height:25px;
       }
     }
+  }
+}
+
+about{
+  @extend .common_float;
+  .project-sect{
+    @extend .common_float;
+    h1{
+      font-size: 24px;
+      font-weight: bold;
+      padding:32px 0 5px;
+      text-align:center;
+    }
+    .projects{
+    @extend .common_float;
+    padding:15px 0;
+    margin:0px 0 15px;
+    border-bottom:1px solid #ccc;
+      h3{
+        font-size: 21px;
+        padding-bottom: 10px;
+      }
+      .keys{
+        @extend .common_float;
+        line-height: 25px;
+        padding-bottom: 10px;
+      }
+    }
+
   }
 }
 
