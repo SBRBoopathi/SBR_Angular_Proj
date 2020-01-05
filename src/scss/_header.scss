@@ -37,7 +37,10 @@ header{
           background:$corp-color-second-dark;
            border-color:$corp-color-dark;
         }
-        .active{
+        &:focus,&:active{
+          box-shadow: none;:none !important;
+        }
+        &.active{
           background:$corp-color-second-dark !important;
         }
       }
