@@ -80,8 +80,21 @@ $base-border-color: $gray !default;
   width:100%;
 }
 body,html{
-  font-family: 'Roboto', sans-serif;
+  font-family: 'Roboto', sans-serif;  
+    h1{
+      font-size: 24px;
+      font-weight: bold;
+      padding:32px 0 5px;
+      text-align:center;
+    }
 }
+ table{
+    tbody{
+      tr{
+        line-height: 25px;
+      }
+    }
+  }
 body{
   margin:0;
   padding: 0;
@@ -145,6 +158,36 @@ about{
       }
     }
 
+  }
+}
+
+skills{
+  background: #e5e5e5;
+  @extend .common_float;
+  .table-responsive{
+    border:1px solid #ccc;
+  }
+  .skill_inner{
+    @extend .common_float;
+    h1{
+      padding-bottom: 20px;
+    }
+  }
+  table{
+    thead{
+      background: #c7c3c3;
+    th{
+      line-height: 21px;
+      vertical-align: middle !important;
+    }
+
+    }
+    tbody{
+      border: 1px solid #ccc;
+      tr{
+        line-height: 25px;
+      }
+    }
   }
 }
 
