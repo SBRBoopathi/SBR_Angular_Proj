@@ -18,7 +18,7 @@ import { BannerComponent } from './banner/banner.component';
 import { AboutComponent } from './about/about.component';
 import { ContactComponent } from './contact/contact.component';
 import { ExperienceComponent } from './experience/experience.component';
-import { SkillsComponent } from './skills/skills.component';
+//import { SkillsComponent } from './skills/skills.component';
 
 /************* DropDown  **************/
 
@@ -27,17 +27,19 @@ const appRoutes: Routes = [
   { path: '', component: HomeComponent },
   { path: 'home', component: HomeComponent },
   { path: 'about', component: AboutComponent },
-  { path: 'skills', component: SkillsComponent },
+  { path: 'skills',
+    loadChildren:'./skills/skills.module#SkillsModule'
+  },
   { path: 'experience', component: ExperienceComponent },
   { path: 'contact', component: ContactComponent }
 ];
 
 
 @NgModule({
-  imports:      [ BrowserModule, FormsModule, NgbModule, RouterModule.forRoot(appRoutes), HttpClientModule],
+  imports: [ BrowserModule, FormsModule, NgbModule, RouterModule.forRoot(appRoutes), HttpClientModule],
   exports: [RouterModule, HeaderComponent],
-  declarations: [ AppComponent, HelloComponent, HomeComponent, HeaderComponent, BannerComponent, AboutComponent, SkillsComponent, ContactComponent, ExperienceComponent],
+  declarations: [ AppComponent, HelloComponent, HomeComponent, HeaderComponent, BannerComponent, AboutComponent, ContactComponent, ExperienceComponent],
   providers: [],
-  bootstrap: [AppComponent, HeaderComponent, BannerComponent, AboutComponent, SkillsComponent, ContactComponent, ExperienceComponent]
+  bootstrap: [AppComponent, HeaderComponent, BannerComponent, AboutComponent, ContactComponent, ExperienceComponent]
 })
 export class AppModule { }
