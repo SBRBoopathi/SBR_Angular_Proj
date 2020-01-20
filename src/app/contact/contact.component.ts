@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { FormControl, FormGroup, FormArray} from '@angular/forms';
 
 @Component({
   selector: 'contact',
@@ -7,4 +8,11 @@ import { Component } from '@angular/core';
 })
 export class ContactComponent  {
   name = 'Contact Us';
+  userForm:FormGroup;
+  constructor(){
+    this.userForm = new FormGroup({
+      'name' : new FormControl(),
+      'email' : new FormControl()
+    })
+  }
 }

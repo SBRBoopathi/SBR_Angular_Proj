@@ -1,27 +1,68 @@
 <div class="container-fluid full-width">
 	<div class="inner_container">
-		<div><h1>{{ name }}</h1></div>
+		<div>
+			<h1>{{ name }}</h1>
+		</div>
 		<div class="form_sect">
 			<!-- Default form register -->
 			<div class="row">
-				<div class="col-md-6 col-md-offset-3">
-					<form class="form-horizontal">
+				<div class="col-md-6">
+					<form class="form-horizontal" [formGroup]="userForm">
 						<div class="form-group">
-							<label class="control-label col-sm-2">Email</label>
+							<label class="control-label col-sm-2">Name</label>
 							<div class="col-sm-10">
-								<input type="text" class="form-control">
+								<input type="text" class="form-control" formControlName="name">
+						  </div>
 						</div>
-							</div>
-							<div class="form-group">
-								<label class="control-label col-sm-2">Password</label>
-								<div class="col-sm-10">
-									<input type="password" class="form-control" >
-						</div>
-								</div>
-								<button class="btn btn-default" type="button">Reset</button>
-								<button class="btn btn-primary pull-right" type="submit">Submit</button>
+            <div class="form-group">
+              <label class="control-label col-sm-2">Email</label>
+              <div class="col-sm-10">
+                <input type="email" class="form-control"  formControlName="email">
+              </div>
+            </div>
+            <!--div class="form-group">
+              <label class="control-label col-sm-2">Email1</label>
+              <div class="col-sm-10">
+                <input type="email" class="form-control"  formControlName="email">
+              </div>
+            </div>
+            <div class="form-group">
+              <label class="control-label col-sm-2">Email</label>
+              <div class="col-sm-10">
+                <input type="email" class="form-control"  formControlName="email">
+              </div>
+            </div-->
+            <div class="form-group">              
+            <div class="btn-group btn-group-toggle" ngbRadioGroup>
+              <label ngbButtonLabel class="btn-primary">
+                <input ngbButton type="radio" formControlName="aligned" value = "Left"> Left
+              </label>
+              <label ngbButtonLabel class="btn-primary">
+                <input ngbButton type="radio" formControlName="aligned" value = "Middle"> Middle
+              </label>
+               <label ngbButtonLabel class="btn-primary">
+                <input ngbButton type="radio" formControlName="aligned" value = "Right"> Right
+              </label>
+            </div>
+            </div>
+            <!--div class="btn-group btn-group-toggle">
+              <label class="btn-primary" ngbButtonLabel>
+                <input type="checkbox" name="Left" ngbButton> Left
+              </label>
+              <label class="btn-primary" ngbButtonLabel>
+                <input type="checkbox" name="Middle" ngbButton> Middle
+              </label>
+              <label class="btn-primary" ngbButtonLabel>
+                <input type="checkbox" name="Right" ngbButton> Right
+              </label>
+          </div-->
+            <button class="btn btn-default" type="button">Reset</button>
+            <button class="btn btn-primary pull-right" type="submit">Submit</button>
 					</form>
 				</div>
+        <div class="col-md-6">
+          <pre>{{ userForm.value | json }}</pre>
+        </div>
 			</div>
 			<!-- Default form register -->
 		</div>
