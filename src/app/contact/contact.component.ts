@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { FormControl, FormGroup, FormArray} from '@angular/forms';
+import { FormControl, FormGroup, FormArray, Validators} from '@angular/forms';
 
 @Component({
   selector: 'contact',
@@ -11,19 +11,19 @@ export class ContactComponent  {
   userForm:FormGroup;
   constructor(){
     this.userForm = new FormGroup({
-      'name' : new FormControl(),
-      'email' : new FormControl(),
-      'aligned' : new FormControl(),
+      'name' : new FormControl('',Validators.required),
+      'email' : new FormControl('',Validators.required),
+      'aligned' : new FormControl(true,Validators.required),
       'multiple_align' : new FormArray([
         new FormGroup({
-          'left' : new FormControl()
+          'left' : new FormControl(true,Validators.required)
         }),
         new FormGroup({
-          'middle' : new FormControl()
+          'middle' : new FormControl(false,Validators.required)
           
         }),
         new FormGroup({
-          'right' : new FormControl()
+          'right' : new FormControl(false,Validators.required)
           
         })
       ]),
@@ -34,9 +34,9 @@ export class ContactComponent  {
   }
   create_Address(){
     return new FormGroup({
-          'county': new FormControl(),
-          'city': new FormControl(),
-          'state' : new FormControl()
+          'county': new FormControl('',Validators.required),
+          'city': new FormControl('',Validators.required),
+          'state' : new FormControl('',Validators.required)
         })
   }
   add_address(){
@@ -44,8 +44,15 @@ export class ContactComponent  {
     addressArray.push(this.create_Address());
   }
   remove(index){
-    var remove_addr= this.userForm.get('add_address') as FormArray;
+    var remove_addr= this.userForm.get('add_adress') as FormArray;
     remove_addr.removeAt(index);
+  }
+  submit(){
+    if(this.userForm.valid){
+      
+      console.log(this.userForm.value);
+      alert(this.userForm.value)
+    }
   }
 
 }
