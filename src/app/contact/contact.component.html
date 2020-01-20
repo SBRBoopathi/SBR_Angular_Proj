@@ -35,13 +35,13 @@
             <div class="form-group">              
               <div class="btn-group btn-group-toggle" ngbRadioGroup>
                 <label ngbButtonLabel class="btn-primary">
-                  <input ngbButton type="radio" formControlName="aligned" name="gender" value = "Left"> Left
+                  <input ngbButton type="radio" formControlName="aligned" name="aligned" value = "Left"> Left
                 </label>
                 <label ngbButtonLabel class="btn-primary">
-                  <input ngbButton type="radio" formControlName="aligned" name="gender" value = "Middle"> Middle
+                  <input ngbButton type="radio" formControlName="aligned" name="aligned" value = "Middle"> Middle
                 </label>
                 <label ngbButtonLabel class="btn-primary">
-                  <input ngbButton type="radio" formControlName="aligned" name="gender" value = "Right"> Right
+                  <input ngbButton type="radio" formControlName="aligned" name="aligned" value = "Right"> Right
                 </label>
               </div>
             </div>
@@ -62,8 +62,8 @@
             <div class="form-group add_btn_group">
               <button class="btn btn-default float-right addbtn" type="button" (click) = 'add_address()'>Add Address</button>
             </div>
-            <div class="test" formArrayName ='add_adress' *ngFor = "let address of userForm.get('add_adress').controls ; let i = index">
-              <div class="in" [formGroupName] = "i">
+            <div class="test" formArrayName='add_adress' *ngFor = "let address of userForm.get('add_adress').controls ; let i = index">
+              <div class="in" [formGroupName]= "i">
                   
                 <div class="form-group">
                   <label class="control-label col-sm-2">County</label>
@@ -74,20 +74,20 @@
                 <div class="form-group">
                   <label class="control-label col-sm-2">City</label>
                   <div class="col-sm-6">
-                    <select name="" id="">
-                      <option value="">Salem</option>
-                      <option value="">Namakkal</option>
-                      <option value="">Erode</option>
+                    <select name="" id=""  formControlName="city" name="city">
+                      <option value="Salem">Salem</option>
+                      <option value="Namakkal">Namakkal</option>
+                      <option value="Erode">Erode</option>
                     </select>
                   </div>
                 </div>
                 <div class="form-group">
                   <label class="control-label col-sm-2">State</label>
                   <div class="col-sm-6">
-                    <select name="" id="">
-                      <option value="">TamilNadu1</option>
-                      <option value="">TamilNadu2</option>
-                      <option value="">TamilNadu3</option>
+                    <select name="" id=""  formControlName="state" name="state">
+                      <option value="TamilNadu1">TamilNadu1</option>
+                      <option value="TamilNadu2">TamilNadu2</option>
+                      <option value="TamilNadu3">TamilNadu3</option>
                     </select>
                   </div>
                 </div>

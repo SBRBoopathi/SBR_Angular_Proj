@@ -28,11 +28,7 @@ export class ContactComponent  {
         })
       ]),
       'add_adress' : new FormArray([
-        new FormGroup({
-          'county': new FormControl(),
-          'city': new FormControl(),
-          'state' : new FormControl()
-        })
+       
       ])
     })
   }
