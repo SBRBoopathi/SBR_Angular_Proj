@@ -21,7 +21,7 @@
 					</thead>
 					<tbody>
 						<tr *ngFor="let skill of myskills">
-							<th scope="row">{{ skill.id }}</th>
+							<th scope="row">{{ skill.id | ageFilter}}</th>
 							<td>
 								{{ skill.Project }}
 							</td>

@@ -19,6 +19,8 @@ import { BannerComponent } from './banner/banner.component';
 import { AboutComponent } from './about/about.component';
 import { ContactComponent } from './contact/contact.component';
 import { ExperienceComponent } from './experience/experience.component';
+import { addWelcomeWordPipe } from './pipes/addwelcome.pipe';
+import { ageFilterPipe } from './pipes/agefilter.pipe';
 //import { SkillsComponent } from './skills/skills.component';
 
 /************* DropDown  **************/
@@ -39,7 +41,7 @@ const appRoutes: Routes = [
 @NgModule({
   imports: [ BrowserModule, FormsModule, NgbModule, RouterModule.forRoot(appRoutes), HttpClientModule, ReactiveFormsModule],
   exports: [RouterModule, HeaderComponent],
-  declarations: [ AppComponent, HelloComponent, HomeComponent, HeaderComponent, BannerComponent, AboutComponent, ContactComponent, ExperienceComponent],
+  declarations: [ AppComponent, HelloComponent, HomeComponent, HeaderComponent, BannerComponent, AboutComponent, ContactComponent, ExperienceComponent, addWelcomeWordPipe, ageFilterPipe],
   providers: [],
   bootstrap: [AppComponent, HeaderComponent, BannerComponent, AboutComponent, ContactComponent, ExperienceComponent]
 })
