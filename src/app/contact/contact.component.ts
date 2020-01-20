@@ -26,7 +26,24 @@ export class ContactComponent  {
           'right' : new FormControl()
           
         })
+      ]),
+      'add_adress' : new FormArray([
+        new FormGroup({
+          'county': new FormControl(),
+          'city': new FormControl(),
+          'state' : new FormControl()
+        })
       ])
     })
   }
+
+  add_address(){
+    var addressArray = this.userForm.get('add_adress') as FormArray;
+    addressArray.push(new FormGroup({
+          'county': new FormControl(),
+          'city': new FormControl(),
+          'state' : new FormControl()
+        }))
+  }
+
 }
