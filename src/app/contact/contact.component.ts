@@ -54,5 +54,8 @@ export class ContactComponent  {
       alert(this.userForm.value)
     }
   }
+  reset(){
+    this.userForm.reset();
+  }
 
 }
