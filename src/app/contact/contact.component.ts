@@ -12,7 +12,21 @@ export class ContactComponent  {
   constructor(){
     this.userForm = new FormGroup({
       'name' : new FormControl(),
-      'email' : new FormControl()
+      'email' : new FormControl(),
+      'aligned' : new FormControl(),
+      'multiple_align' : new FormArray([
+        new FormGroup({
+          'left' : new FormControl()
+        }),
+        new FormGroup({
+          'middle' : new FormControl()
+          
+        }),
+        new FormGroup({
+          'right' : new FormControl()
+          
+        })
+      ])
     })
   }
 }
