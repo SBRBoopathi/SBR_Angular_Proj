@@ -26,6 +26,10 @@ contact{
       @extend .common_float;
           padding: 10px;
     background: #ccc;
-    margin: 10px 0
+    margin: 10px 0;
+    .fa{
+      float: right;
+      cursor: pointer;
+    }
     }
 }

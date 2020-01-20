@@ -28,18 +28,24 @@ export class ContactComponent  {
         })
       ]),
       'add_adress' : new FormArray([
-       
+        this.create_Address()
       ])
     })
   }
-
-  add_address(){
-    var addressArray = this.userForm.get('add_adress') as FormArray;
-    addressArray.push(new FormGroup({
+  create_Address(){
+    return new FormGroup({
           'county': new FormControl(),
           'city': new FormControl(),
           'state' : new FormControl()
-        }))
+        })
+  }
+  add_address(){
+    var addressArray = this.userForm.get('add_adress') as FormArray;
+    addressArray.push(this.create_Address());
+  }
+  remove(index){
+    var remove_addr= this.userForm.get('add_address') as FormArray;
+    remove_addr.removeAt(index);
   }
 
 }

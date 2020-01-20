@@ -63,6 +63,8 @@
               <button class="btn btn-default float-right addbtn" type="button" (click) = 'add_address()'>Add Address</button>
             </div>
             <div class="test" formArrayName='add_adress' *ngFor = "let address of userForm.get('add_adress').controls ; let i = index">
+              
+              <i class="fa fa-times-circle" (click)="remove(i)" aria-hidden="true"></i>
               <div class="in" [formGroupName]= "i">
                   
                 <div class="form-group">
