@@ -38,7 +38,7 @@ export class ParentComponent implements AfterViewInit{
 
      console.log(this.desct.nativeElement.innerHTML);
      this.desct.nativeElement.innerHTML = "Using View child (elementref) Dome succesfully updated"
-
+ 
      this.hellos.forEach(hello => console.log(hello));
    }
 
