@@ -36,6 +36,7 @@ const appRoutes: Routes = [
     loadChildren:'./skills/skills.module#SkillsModule'
   },
   { path: 'parent', component: ParentComponent },
+  { path: 'child', component: ChildComponent },
   { path: 'contact', component: ContactComponent }
 ];
 
@@ -43,7 +44,7 @@ const appRoutes: Routes = [
 @NgModule({
   imports: [ BrowserModule, FormsModule, NgbModule, RouterModule.forRoot(appRoutes), HttpClientModule, ReactiveFormsModule],
   exports: [RouterModule, HeaderComponent],
-  declarations: [ AppComponent, HelloComponent, HomeComponent, HeaderComponent, BannerComponent, AboutComponent, ContactComponent, ExperienceComponent, addWelcomeWordPipe, ageFilterPipe, ChildComponent, ParentComponent],
+  declarations: [ AppComponent, HelloComponent, HomeComponent, HeaderComponent, BannerComponent, AboutComponent, ContactComponent, ExperienceComponent, addWelcomeWordPipe, ageFilterPipe, ChildComponent, ParentComponent, ChildComponent],
   providers: [],
   bootstrap: [AppComponent, HeaderComponent, BannerComponent, AboutComponent, ContactComponent, ExperienceComponent]
 })
