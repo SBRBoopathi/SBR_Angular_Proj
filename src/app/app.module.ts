@@ -18,6 +18,8 @@ import { HeaderComponent } from './header/header.component';
 import { BannerComponent } from './banner/banner.component';
 import { AboutComponent } from './about/about.component';
 import { ContactComponent } from './contact/contact.component';
+import { ChildComponent } from './child/child.component';
+import { ParentComponent } from './parent/parent.component';
 import { ExperienceComponent } from './experience/experience.component';
 import { addWelcomeWordPipe } from './pipes/addwelcome.pipe';
 import { ageFilterPipe } from './pipes/agefilter.pipe';
@@ -33,7 +35,7 @@ const appRoutes: Routes = [
   { path: 'skills',
     loadChildren:'./skills/skills.module#SkillsModule'
   },
-  { path: 'experience', component: ExperienceComponent },
+  { path: 'parent', component: ParentComponent },
   { path: 'contact', component: ContactComponent }
 ];
 
@@ -41,7 +43,7 @@ const appRoutes: Routes = [
 @NgModule({
   imports: [ BrowserModule, FormsModule, NgbModule, RouterModule.forRoot(appRoutes), HttpClientModule, ReactiveFormsModule],
   exports: [RouterModule, HeaderComponent],
-  declarations: [ AppComponent, HelloComponent, HomeComponent, HeaderComponent, BannerComponent, AboutComponent, ContactComponent, ExperienceComponent, addWelcomeWordPipe, ageFilterPipe],
+  declarations: [ AppComponent, HelloComponent, HomeComponent, HeaderComponent, BannerComponent, AboutComponent, ContactComponent, ExperienceComponent, addWelcomeWordPipe, ageFilterPipe, ChildComponent, ParentComponent],
   providers: [],
   bootstrap: [AppComponent, HeaderComponent, BannerComponent, AboutComponent, ContactComponent, ExperienceComponent]
 })
