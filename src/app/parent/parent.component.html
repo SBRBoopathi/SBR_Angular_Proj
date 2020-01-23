@@ -1,18 +1,22 @@
- <h1>SBR Boopa</h1>
- <app-child [childmsg]="parentMessage" (newMsgEvent)="receiveMsg($event)"></app-child>
-<!-- newMsgEvent Event emitter is event from child ---> 
- <div>{{message}}</div>
+<div class="container-fluid full-width">
+	<div class="inner_container">
+		<h1>SBR Boopa</h1>
+		<app-child [childmsg]="parentMessage" (newMsgEvent)="receiveMsg($event)"></app-child>
+		<!-- newMsgEvent Event emitter is event from child --->
+		<div>{{message}}</div>
 
- <div>
-    RESULT : {{ viewChildMsg }}
- </div>
+		<div>
+			RESULT : {{ viewChildMsg }}
+		</div>
 
- <h1>
-   Student Details
- </h1>
+		<h1>
+			list of Student
+		</h1>
 
- <ul>
-   <li>
-     
-   </li>
- </ul>
+		<ul>
+			<li *ngFor="let stu of students">
+				{{stu.name}}
+			</li>
+		</ul>
+	</div>
+</div>

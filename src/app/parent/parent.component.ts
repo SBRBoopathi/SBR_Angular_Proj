@@ -6,7 +6,7 @@ import { StudentService } from '../service/student.service';
   templateUrl: './parent.component.html' 
   
 })
-export class ParentComponent implements AfterViewInit{
+export class ParentComponent implements AfterViewInit, OnInit{
   parentMessage = "message from parent Boopathi" // passing data from(Parent) here to child component
   
 
@@ -18,7 +18,7 @@ export class ParentComponent implements AfterViewInit{
 
   ngOnInit(){
     this.students = this.studentservice.getStudents();
-    /alert(this.students.)
+    //alert(this.students.)
   }
 
    //Child to Parent passing data @output starts here

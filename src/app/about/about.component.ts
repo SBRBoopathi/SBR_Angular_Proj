@@ -1,15 +1,26 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import { StudentService } from '../service/student.service';
 
 @Component({
   selector: 'about',
   templateUrl: './about.component.html',
   styleUrls: [ './about.component.scss' ]
 })
-export class AboutComponent  {
+export class AboutComponent implements OnInit {
   project_json:string;
   project_json_array:string[];
 
- ngOnInit(){
+  ////// Srevice calls here
+  public student_desc = [];
+  
+  constructor(private student : StudentService ){
+  }
+
+   ngOnInit(){
+
+  //// Service calls hreee
+  this.student_desc = this.student.getStudents();
+
    this.project_json = `[
                     {
                     "Project": "Lenovo – Optimization AEM Campaigns",
