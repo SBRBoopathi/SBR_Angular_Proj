@@ -1,5 +1,6 @@
-import { Component, ViewChild, AfterViewInit, ElementRef, QueryList, ViewChildren } from '@angular/core';
+import { Component, ViewChild, AfterViewInit, ElementRef, QueryList, ViewChildren, OnInit } from '@angular/core';
 import { ChildComponent } from "../child/child.component";
+import { StudentService } from '../service/student.service';
 @Component({
   selector: 'app-parent',
   templateUrl: './parent.component.html' 
@@ -8,7 +9,17 @@ import { ChildComponent } from "../child/child.component";
 export class ParentComponent implements AfterViewInit{
   parentMessage = "message from parent Boopathi" // passing data from(Parent) here to child component
   
-  constructor() { }
+
+  public students = [];   
+   
+  constructor(private studentservice : StudentService) { 
+
+  }
+
+  ngOnInit(){
+    this.students = this.studentservice.getStudents();
+    /alert(this.students.)
+  }
 
    //Child to Parent passing data @output starts here
   message:string;
@@ -41,6 +52,8 @@ export class ParentComponent implements AfterViewInit{
  
      this.hellos.forEach(hello => console.log(hello));
    }
+
+    
 
 
 }

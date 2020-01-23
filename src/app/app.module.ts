@@ -23,6 +23,7 @@ import { ParentComponent } from './parent/parent.component';
 import { ExperienceComponent } from './experience/experience.component';
 import { addWelcomeWordPipe } from './pipes/addwelcome.pipe';
 import { ageFilterPipe } from './pipes/agefilter.pipe';
+import { StudentService } from './service/student.service';
 //import { SkillsComponent } from './skills/skills.component';
 
 /************* DropDown  **************/
@@ -45,7 +46,7 @@ const appRoutes: Routes = [
   imports: [ BrowserModule, FormsModule, NgbModule, RouterModule.forRoot(appRoutes), HttpClientModule, ReactiveFormsModule],
   exports: [RouterModule, HeaderComponent],
   declarations: [ AppComponent, HelloComponent, HomeComponent, HeaderComponent, BannerComponent, AboutComponent, ContactComponent, ExperienceComponent, addWelcomeWordPipe, ageFilterPipe, ChildComponent, ParentComponent, ChildComponent],
-  providers: [],
+  providers: [StudentService],
   bootstrap: [AppComponent, HeaderComponent, BannerComponent, AboutComponent, ContactComponent, ExperienceComponent]
 })
 export class AppModule { }
