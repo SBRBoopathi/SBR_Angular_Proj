@@ -1,0 +1,14 @@
+
+.my-theme {
+   background-color: red; 
+} 
+:host /deep/ h3 { ///deep/ selector forces its style to its own component, child component, nested component, view children and content children
+  color: yellow;	
+  font-style: italic;
+}
+:host  >>> p {
+  color: white;
+  font-style: Monospace;
+  font-size: 20px;
+} 
+

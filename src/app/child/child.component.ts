@@ -4,6 +4,7 @@ import { StudentService } from '../service/student.service';
 @Component({
   selector: 'app-child',
   templateUrl: './child.component.html',
+  styleUrls:['./child.component.scss']
 })
 
 export class ChildComponent implements OnInit {

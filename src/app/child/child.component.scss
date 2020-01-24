@@ -1,0 +1,2 @@
+:host { position: relative; color:red; font-size: 14px; font-weight: bold } //:host is a pseudo-class selector that applies styles in the element that hosts the component.
+ :host-context(.my-theme) h1{background-color: blue; } //style given above will be applied on host element only when a CSS class named as my-theme will be found anywhere in parent tree up to the document root.

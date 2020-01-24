@@ -3,7 +3,9 @@ import { ChildComponent } from "../child/child.component";
 import { StudentService } from '../service/student.service';
 @Component({
   selector: 'app-parent',
-  templateUrl: './parent.component.html' 
+  templateUrl: './parent.component.html',
+  styleUrls:['./parent.component.scss']
+  
   
 })
 export class ParentComponent implements AfterViewInit, OnInit{
