@@ -9,13 +9,14 @@ import { HttpClient } from '@angular/common/http';
 })
 export class SkillsComponent  {
   name = 'skills';
+  errMsg;
   constructor(private http:HttpClient){}
   myskills : object;
   ngOnInit(){
-    this.http.get('https://api.myjson.com/bins/16i7x4').subscribe(data => {
+    this.http.get('https://api.myjson.com/bins/16i7x41').subscribe(data => {
       this.myskills = data;
       console.log(data)
-    })
+    },error => this.errMsg = error)
   }
 
 
