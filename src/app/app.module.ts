@@ -24,6 +24,8 @@ import { ExperienceComponent } from './experience/experience.component';
 import { addWelcomeWordPipe } from './pipes/addwelcome.pipe';
 import { ageFilterPipe } from './pipes/agefilter.pipe';
 import { StudentService } from './service/student.service';
+import { ColorDirective } from './directives/customerror.directive';
+
 //import { SkillsComponent } from './skills/skills.component';
 
 /************* DropDown  **************/
@@ -45,7 +47,7 @@ const appRoutes: Routes = [
 @NgModule({
   imports: [ BrowserModule, FormsModule, NgbModule, RouterModule.forRoot(appRoutes), HttpClientModule, ReactiveFormsModule],
   exports: [RouterModule, HeaderComponent],
-  declarations: [ AppComponent, HelloComponent, HomeComponent, HeaderComponent, BannerComponent, AboutComponent, ContactComponent, ExperienceComponent, addWelcomeWordPipe, ageFilterPipe, ChildComponent, ParentComponent, ChildComponent],
+  declarations: [ AppComponent, HelloComponent, HomeComponent, HeaderComponent, BannerComponent, AboutComponent, ContactComponent, ExperienceComponent, addWelcomeWordPipe, ageFilterPipe, ChildComponent, ParentComponent, ChildComponent, ColorDirective],
   providers: [StudentService],
   bootstrap: [AppComponent, HeaderComponent, BannerComponent, AboutComponent, ContactComponent, ExperienceComponent]
 })
